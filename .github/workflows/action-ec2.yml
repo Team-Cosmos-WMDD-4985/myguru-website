@@ -23,5 +23,6 @@ jobs:
         chmod 600 deploy_key
         ssh -o StrictHostKeyChecking=no -i deploy_key $USERNAME@$HOST << EOF
         cd /var/www/html
+        sudo git checkout master
         sudo git  pull origin master
         EOF
