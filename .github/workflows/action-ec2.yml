@@ -14,14 +14,14 @@ jobs:
       uses: actions/checkout@v2
 
     - name: Deploy to EC2
-        env:
-          SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
-          HOST: ${{ secrets.HOST_DNS }}
-          USERNAME: ${{ secrets.USERNAME }}
-        run: |
-          echo "$SSH_KEY" > deploy_key
-          chmod 600 deploy_key
-          ssh -o StrictHostKeyChecking=no -i deploy_key $USERNAME@$HOST << EOF
-          cd /var/www/html
-          git  pull git@github.com:Team-Cosmos-WMDD-4985/myguru-website.git
-          git checkout master
+      env:
+        SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+        HOST: ${{ secrets.HOST_DNS }}
+        USERNAME: ${{ secrets.USERNAME }}
+      run: |
+        echo "$SSH_KEY" > deploy_key
+        chmod 600 deploy_key
+        ssh -o StrictHostKeyChecking=no -i deploy_key $USERNAME@$HOST << EOF
+        cd /var/www/html
+        git  pull git@github.com:Team-Cosmos-WMDD-4985/myguru-website.git
+        git checkout master
