@@ -25,4 +25,6 @@ jobs:
           cd /var/www/html
           sudo git checkout master
           sudo git pull origin master
-EOF
+          exit
+          EOF
+          rm -f deploy_key
