@@ -19,8 +19,6 @@ jobs:
         host: ${{ secrets.HOST_DNS }}  
         username: ${{ secrets.USERNAME }}  
         key: ${{ secrets.EC2_SSH_KEY }}
-        env:
-          TARGET_PATH: ${{ secrets.TARGET_PATH }}
         script: |
-          mkdir -p $TARGET_PATH
-          cp -r path/to/local/files/* $TARGET_PATH
+          mkdir -p /var/www/html
+          cp -r path/to/local/files/* /var/www/html
