@@ -23,5 +23,5 @@ jobs:
         chmod 600 deploy_key
         ssh -o StrictHostKeyChecking=no -i deploy_key $USERNAME@$HOST << EOF
         cd /var/www/html
-        git  pull git@github.com:Team-Cosmos-WMDD-4985/myguru-website.git
-        git checkout master
+        sudo git  pull origin master
+        EOF
