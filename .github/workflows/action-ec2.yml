@@ -13,12 +13,15 @@ jobs:
     - name: Checkout Repository
       uses: actions/checkout@v2
 
-    - name: Copy Files to EC2
-      uses: appleboy/ssh-action@master
-      with:
-        host: ${{ secrets.HOST_DNS }}  
-        username: ${{ secrets.USERNAME }}  
-        key: ${{ secrets.EC2_SSH_KEY }}
-        script: |
-          mkdir -p /var/www/html
-          cp -r path/to/local/files/* /var/www/html
+    - name: Deploy to EC2
+        env:
+          SSH_KEY: ${{ secrets.EC2_SSH_KEY }}
+          HOST: ${{ secrets.HOST_DNS }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: |
+          echo "$SSH_KEY" > deploy_key
+          chmod 600 deploy_key
+          ssh -o StrictHostKeyChecking=no -i deploy_key $USERNAME@$HOST << EOF
+          cd /var/www/html
+          git  pull git@github.com:Team-Cosmos-WMDD-4985/myguru-website.git
+          git checkout master
