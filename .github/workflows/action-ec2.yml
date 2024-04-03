@@ -27,8 +27,8 @@ jobs:
           chmod 600 deploy_key
           ssh -o StrictHostKeyChecking=no -i deploy_key $USERNAME@$HOST << EOF
           cd /var/www/html
-          sudo rm -rf /var/www/html/*  
-          sudo cp /home/runner/work/myguru-website ./
+          rm -rf /var/www/html/*  
+          cp /home/runner/work/myguru-website ./
           exit
           EOF
           rm -f deploy_key
