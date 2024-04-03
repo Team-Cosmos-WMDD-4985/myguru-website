@@ -488,9 +488,10 @@ h6 {
   }
 }
 
-@media (max-height: 640px) {
+@media (max-height: 768px) {
   #hero {
-    height: 120vh;
+    height: 100vh;
+    padding: 0 50px !important;
   }
 }
 
