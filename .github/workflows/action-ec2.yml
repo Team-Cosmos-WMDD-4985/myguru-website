@@ -23,8 +23,8 @@ jobs:
           chmod 600 deploy_key
           ssh -o StrictHostKeyChecking=no -i deploy_key $USERNAME@$HOST << EOF
           cd /var/www/html
-          sudo git checkout master
-          sudo mv ./ /var/www/html  # Replace /path/to/source and /path/to/destination with actual paths
+          sudo rm -rf /var/www/html/*  
+          sudo mv $GITHUB_WORKSPACE/* . 
           exit
           EOF
           rm -f deploy_key
