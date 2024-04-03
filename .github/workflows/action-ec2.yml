@@ -16,6 +16,7 @@ jobs:
       - name: Debug Info
         run: |
           ls -la $GITHUB_WORKSPACE
+          echo  "GitHub Workspace:" $GITHUB_WORKSPACE
 
       - name: Deploy to EC2
         env:
