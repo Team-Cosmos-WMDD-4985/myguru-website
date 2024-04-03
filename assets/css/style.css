@@ -491,7 +491,10 @@ h6 {
 @media (max-height: 768px) {
   #hero {
     height: 100vh;
-    padding: 0 50px !important;
+  }
+
+  .product-screen-1 img {
+    width: 80%;
   }
 }
 
