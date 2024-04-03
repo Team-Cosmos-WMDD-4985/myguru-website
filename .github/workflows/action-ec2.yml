@@ -28,7 +28,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i deploy_key $USERNAME@$HOST << EOF
           cd /var/www/html
           sudo rm -rf /var/www/html/*  
-          sudo cp $GITHUB_WORKSPACE ./
+          sudo cp /home/runner/work/myguru-website ./
           exit
           EOF
           rm -f deploy_key
