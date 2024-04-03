@@ -24,7 +24,7 @@ jobs:
           ssh -o StrictHostKeyChecking=no -i deploy_key $USERNAME@$HOST << EOF
           cd /var/www/html
           sudo git checkout master
-          sudo git pull origin master
+          sudo mv ./ /var/www/html  # Replace /path/to/source and /path/to/destination with actual paths
           exit
           EOF
           rm -f deploy_key
