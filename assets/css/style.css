@@ -598,8 +598,10 @@ h6 {
 
   }
 
+  .arrows,
   .heroImage {
     display: none;
+
   }
 
   .heroImage2 {
