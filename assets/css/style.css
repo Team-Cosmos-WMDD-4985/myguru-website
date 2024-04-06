@@ -193,7 +193,7 @@ h6 {
   }
 
   #getStarted {
-    display: none !important;
+    /* display: none !important; */
   }
 
 }
