@@ -10,7 +10,7 @@
   <meta content="" name="keywords">
 
   <!-- Favicons -->
-  <link href="assets/img/contact.png" rel="icon">
+  <link href="assets/img/favicon.png" rel="icon">
   <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
   <!-- Google Fonts -->
@@ -22,6 +22,8 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
@@ -48,15 +50,28 @@
       </div>
 
       <nav id="navbar" class="navbar">
-        <ul>
+
+        <ul id="desktopNav">
           <li><a class="nav-link scrollto active" href="#features">Features</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
-      </nav>
-      <a href="https://drive.google.com/uc?export=download&id=1Ozq_V_dbXRH62qvJ-PWvyJgjdliQVY_y" id="getStarted" class="btn-get-started scrollto" download="Proposal">Proposal</a>
 
-      <i class="bi bi-list mobile-nav-toggle"></i>
+        <ul class="mobileNav">
+          <li><a class="nav-link scrollto active" href="#features">Features</a></li>
+          <li><a class="nav-link scrollto" href="#team">Team</a></li>
+          <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+          <li><a class="nav-link scrollto"
+              href="https://drive.google.com/uc?export=download&id=1Ozq_V_dbXRH62qvJ-PWvyJgjdliQVY_y">Proposal</a></li>
+        </ul>
+
+      </nav>
+
+      <a href="https://drive.google.com/uc?export=download&id=1Ozq_V_dbXRH62qvJ-PWvyJgjdliQVY_y" id="getStarted"
+        class="btn-get-started scrollto" download="Proposal">Proposal</a>
+
+      <i class="bi bi-list mobile-nav-toggle">
+      </i>
 
     </div>
   </header>
@@ -64,36 +79,13 @@
 
   <!-- ======= Hero Section ======= -->
   <section id="hero">
-    <div class="mobile">
-      <img src="assets/img/hero-bg.jpg" alt="" class="heroImage">
-      <img src="assets/img/hero-small.png" alt="" class="heroImage2">
-      <img src="assets/img/Asset2.png" alt="" class="Asset1">
-      <img src="assets/img/Asset1.png" alt="" class="Asset2">
-      <img src="assets/img/Asset3.png" alt="" class="Asset3">
-    </div>
 
     <div class="hero-text" data-aos="zoom-out">
       <h2>THE BEST </h2>
       <h2> COURSE ASSISTANT</h2>
       <p>Let AI perfect your schedule, every time for your study.</p>
     </div>
-
-
-    <!-- <div class="product-screens">
-
-      <div class="product-screen-1" data-aos="fade-up" data-aos-delay="400">
-        <img src="assets/img/product-screen-1.png" alt="">
-      </div>
-
-      <div class="product-screen-2" data-aos="fade-up" data-aos-delay="200">
-        <img src="assets/img/product-screen-2.png" alt="">
-      </div>
-
-      <div class="product-screen-3" data-aos="fade-up">
-        <img src="assets/img/product-screen-3.png" alt="">
-      </div>
-        </div> -->
-
+    <img src="assets/img/hero-bg.png" alt="" class="heroImage">
   </section>
   <!-- End Hero Section -->
 
@@ -168,6 +160,10 @@
       </div>
     </section><!-- End Featuress Section -->
 
+    <div>
+      <img src="./assets/img/study.png" alt="study" class="study">
+    </div>
+
     <!-- ======= Team Section ======= -->
     <section id="team" class="section-bg">
       <div class="container" data-aos="fade-up">
@@ -184,8 +180,12 @@
               <h4>Ahmed Abdou</h4>
               <span>Full Stack Developer</span>
               <div class="social">
-                <a href="https://www.linkedin.com/in/ahmdabdou/">
-                  <i class="bi bi-linkedin"></i><span>ahmdabdou</span></a>
+                <a href="https://www.linkedin.com/in/ahmdabdou/" class="linkedin-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/hakam4all" class="github-icon">
+                  <i class="fab fa-github"></i>
+                </a>
 
               </div>
             </div>
@@ -197,8 +197,13 @@
               <h4>Akash Bawa</h4>
               <span>Full Stack Developer</span>
               <div class="social">
-                <a href="https://www.linkedin.com/in/akash-bawa/">
-                  <i class="bi bi-linkedin"></i><span>akash-bawa</span></a>
+                <a href="https://www.linkedin.com/in/akash-bawa/" class="linkedin-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/akashbawa" class="github-icon">
+                  <i class="fab fa-github"></i>
+                </a>
+
               </div>
             </div>
           </div>
@@ -209,8 +214,15 @@
               <h4>Arash Ghezavati</h4>
               <span>Full Stack Developer</span>
               <div class="social">
-                <a href="https://www.linkedin.com/in/arash-ghezavati/">
-                  <i class="bi bi-linkedin"></i><span>arash-ghezavati</span></a>
+                <a href="https://www.linkedin.com/in/arash-ghezavati/" class="linkedin-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/arash" class="github-icon">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://arash-ghezavati.netlify.app/" class="icon custom-swirl-icon">
+                  <img src="./assets/img/swirl.png" alt="Custom Swirl">
+                </a>
               </div>
             </div>
           </div>
@@ -221,8 +233,13 @@
               <h4>Somchai Sik</h4>
               <span>Full Stack Developer</span>
               <div class="social">
-                <a href="https://www.linkedin.com/in/somchai-sik/">
-                  <i class="bi bi-linkedin"></i><span>somchai-sik</span></a>
+                <a href="https://www.linkedin.com/in/somchai-sik/" class="linkedin-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://github.com/aman" class="github-icon">
+                  <i class="fab fa-github"></i>
+                </a>
+
               </div>
             </div>
           </div>
@@ -233,8 +250,18 @@
               <h4>Alvin Sierra</h4>
               <span>UI/UX Designer</span>
               <div class="social">
-                <a href="https://www.linkedin.com/in/alvindavesierra/">
-                  <i class="bi bi-linkedin"></i><span>alvindavesierra</span></a>
+                <a href="https://www.linkedin.com/in/alvindavesierra/" class="linkedin-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+
+                <!-- <a href="https://www.behance.net/yourusername" class="icon behance-icon">
+                  <i class="fab fa-behance"></i>
+                </a> -->
+
+                <!-- <a href="your-custom-link" class="icon custom-swirl-icon">
+                  <img src="./assets/img/swirl.png" alt="Custom Swirl">
+                </a> -->
+
               </div>
             </div>
           </div>
@@ -245,8 +272,19 @@
               <h4>Beant Singh</h4>
               <span>UI/UX Designer</span>
               <div class="social">
-                <a href="https://www.linkedin.com/in/beant-singhh/">
-                  <i class="bi bi-linkedin"></i><span>beant-singhh</span></a>
+
+                <a href="https://www.linkedin.com/in/beant-singhh/" class="linkedin-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+
+                <!-- <a href="https://www.behance.net/yourusername" class="icon behance-icon">
+                  <i class="fab fa-behance"></i>
+                </a> -->
+
+                <!-- <a href="your-custom-link" class="icon custom-swirl-icon">
+                  <img src="./assets/img/swirl.png" alt="Custom Swirl">
+                </a> -->
+
               </div>
             </div>
           </div>
@@ -257,8 +295,15 @@
               <h4>Jasmine Tse</h4>
               <span>UI/UX Designer</span>
               <div class="social">
-                <a href="https://www.linkedin.com/in/jasminetse/">
-                  <i class="bi bi-linkedin"></i><span>jasminetse</span></a>
+                <a href="https://www.linkedin.com/in/jasminetse/" class="linkedin-icon">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://www.behance.net/jasminetse" class="icon behance-icon">
+                  <i class="fab fa-behance"></i>
+                </a>
+                <a href=" https://www.jasminetse.com/" class="icon custom-swirl-icon">
+                  <img src="./assets/img/swirl.png" alt="Custom Swirl">
+                </a>
               </div>
             </div>
           </div>
@@ -320,8 +365,8 @@
                   </div>
                 </div>
                 <div class="form-group mt-3">
-                  <input type="email" class="form-control" name="email" id="email" placeholder="Email"
-                    data-rule="email" data-msg="Please enter a valid email">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Email" data-rule="email"
+                    data-msg="Please enter a valid email">
                 </div>
                 <div class="form-group mt-3">
                   <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
@@ -345,32 +390,30 @@
 
   <!-- ======= Footer ======= -->
   <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 text-lg-start text-center">
-          <div class="copyright">
-            &copy; Copyright <strong>Avilon</strong>. All Rights Reserved
-          </div>
-          <!-- <div class="credits"> -->
-          <!--
-            All the links in the footer should remain intact.
-            You can delete the links only if you purchased the pro version.
-            Licensing information: https://bootstrapmade.com/license/
-            Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/buy/?theme=Avilon
-          -->
-          <!-- Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> -->
-          <!-- </div> -->
-        </div>
-        <!-- <div class="col-lg-6">
-          <nav class="footer-links text-lg-right text-center pt-2 pt-lg-0">
-            <a href="#intro" class="scrollto">Home</a>
-            <a href="#about" class="scrollto">About</a>
-            <a href="#">Privacy Policy</a>
-            <a href="#">Terms of Use</a>
-          </nav>
-        </div> -->
-      </div>
+    <div class="copyright">
+      &copy; 2024 <strong>MyGuru</strong>. All Rights Reserved
     </div>
+    <nav class="navbar">
+
+      <ul id="desktopNav">
+        <li><a class="nav-link scrollto active" href="#features">Features</a></li>
+        <li><a class="nav-link scrollto" href="#team">Team</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+      </ul>
+
+      <ul class="mobileNav">
+        <li><a class="nav-link scrollto active" href="#features">Features</a></li>
+        <li><a class="nav-link scrollto" href="#team">Team</a></li>
+        <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+        <li><a class="nav-link scrollto"
+            href="https://drive.google.com/uc?export=download&id=1Ozq_V_dbXRH62qvJ-PWvyJgjdliQVY_y">Proposal</a>
+        </li>
+      </ul>
+
+    </nav>
+
+    <a href="https://drive.google.com/uc?export=download&id=1Ozq_V_dbXRH62qvJ-PWvyJgjdliQVY_y" id="getStarted"
+      class="btn-get-started scrollto" download="Proposal">Proposal</a>
   </footer>
   <!-- End  Footer -->
 
@@ -385,14 +428,6 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js" defer></script>
   <!-- 
-  <script>
-    document.addEventListener('DOMContentLoaded', function () {
-      document.querySelector('.hamburger-menu').addEventListener('click', function () {
-        document.querySelector('.showNavBar').classList.toggle('show');
-        console.log("Clicked")
-      });
-    });
-  </script> -->
 
 
 </body>

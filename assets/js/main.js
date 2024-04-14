@@ -117,6 +117,7 @@
    */
   on('click', '.mobile-nav-toggle', function(e) {
     select('#navbar').classList.toggle('navbar-mobile')
+    select('#mobileNav').classList.toggle('navbar-mobile')
     this.classList.toggle('bi-list')
     this.classList.toggle('bi-x')
   })
@@ -178,5 +179,19 @@
       mirror: false
     })
   });
+
+  document.addEventListener('DOMContentLoaded', function () {
+    var mobileNavToggle = document.querySelector('.mobile-nav-toggle');
+    var mobileNav = document.querySelector('.mobileNav');
+  
+    mobileNavToggle.addEventListener('click', function() {
+      // Toggle mobile navigation visibility
+      mobileNav.classList.toggle('active');
+      // Toggle menu icon
+      this.classList.toggle('bi-list');
+      this.classList.toggle('bi-x');
+    });
+  });
+  
 
 })()
