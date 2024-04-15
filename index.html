@@ -61,8 +61,8 @@
           <li><a class="nav-link scrollto active" href="#features">Features</a></li>
           <li><a class="nav-link scrollto" href="#team">Team</a></li>
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="nav-link scrollto"
-              href="https://drive.google.com/uc?export=download&id=1Ozq_V_dbXRH62qvJ-PWvyJgjdliQVY_y">Proposal</a></li>
+          <li><a class="nav-link scrollto proposalDownload"
+              href="https://drive.google.com/uc?export=download&id=1Ozq_V_dbXRH62qvJ-PWvyJgjdliQVY_y">Download Proposal</a></li>
         </ul>
 
       </nav>
@@ -160,9 +160,9 @@
       </div>
     </section><!-- End Featuress Section -->
 
-    <div>
+    <!-- <div>
       <img src="./assets/img/study.png" alt="study" class="study">
-    </div>
+    </div> -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="section-bg">
@@ -357,7 +357,7 @@
 
           <div class="col-lg-5 col-md-8">
             <div class="form">
-              <form action="forms/contact.php" method="post" role="form" class="php-email-form">
+              <form action="#" class="php-email-form">
                 <div class="row">
                   <div class="form-group mt-3">
                     <input type="text" name="name" class="form-control" id="name" placeholder="Name"
@@ -369,14 +369,14 @@
                     data-msg="Please enter a valid email">
                 </div>
                 <div class="form-group mt-3">
-                  <textarea class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
+                  <textarea id="textdetails" class="form-control" name="message" rows="5" placeholder="Message" required></textarea>
                 </div>
                 <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
+                  <!-- <div class="loading">Loading</div> -->
+                  <!-- <div class="error-message"></div> -->
+                  <div class="sent-message" id="sentMessage">Your message has been sent. Thank you!</div>
                 </div>
-                <div class=""><button type="submit" title="Send Message">Submit</button></div>
+                <div class=""><button type="submit" id="submitBtn" title="Send Message">Submit</button></div>
               </form>
             </div>
           </div>
@@ -393,7 +393,7 @@
     <div class="copyright">
       &copy; 2024 <strong>MyGuru</strong>. All Rights Reserved
     </div>
-    <nav class="navbar">
+    <!-- <nav class="navbar">
 
       <ul id="desktopNav">
         <li><a class="nav-link scrollto active" href="#features">Features</a></li>
@@ -410,10 +410,10 @@
         </li>
       </ul>
 
-    </nav>
+    </nav> -->
 
-    <a href="https://drive.google.com/uc?export=download&id=1Ozq_V_dbXRH62qvJ-PWvyJgjdliQVY_y" id="getStarted"
-      class="btn-get-started scrollto" download="Proposal">Proposal</a>
+    <!-- <a href="https://drive.google.com/uc?export=download&id=1Ozq_V_dbXRH62qvJ-PWvyJgjdliQVY_y" id="getStarted"
+      class="btn-get-started scrollto" download="Proposal">Proposal</a> -->
   </footer>
   <!-- End  Footer -->
 
@@ -423,7 +423,7 @@
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <!-- <script src="assets/vendor/php-email-form/validate.js"></script> -->
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js" defer></script>

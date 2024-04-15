@@ -89,12 +89,9 @@ h6 {
   transition: all 0.5s;
   z-index: 997;
   /* background: linear-gradient(45deg, #1de099, #1dc8cd); */
-  background-color: #26272B;
+  /* background-color: #26272B; */
 }
 
-#header.header-transparent {
-  /* background: transparent; */
-}
 
 #header.header-scrolled {
   /* background: linear-gradient(45deg, #1de099, #1dc8cd); */
@@ -331,6 +328,7 @@ h6 {
   padding: 10px 0 10px 24px;
 }
 
+
 .navbar a,
 .navbar a:focus {
   display: flex;
@@ -444,6 +442,9 @@ h6 {
 
 .navbar-mobile>ul>li {
   padding: 0;
+  margin: .5rem;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-mobile a:hover:before,
@@ -1419,6 +1420,9 @@ section {
   padding: 60px 0;
   overflow: hidden;
   background-color: #000;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
 }
 
 #contact .contact-about h3 {
@@ -1497,11 +1501,16 @@ section {
 
 #contact .php-email-form .sent-message {
   display: none;
-  color: #fff;
   background: #18d26e;
   text-align: center;
-  padding: 15px;
-  font-weight: 600;
+  border-width: 2px;
+  border-color: #7DFDE4;
+  background-color: transparent;
+  border-radius: 20px;
+  padding: 8px 30px;
+  color: #7DFDE4;
+  font-size: large;
+  font-weight: bold;
 }
 
 #contact .php-email-form .loading {
@@ -1623,4 +1632,10 @@ section {
   flex-flow: row;
   align-items: center;
   justify-content: center;
+}
+
+.proposalDownload{
+  background-color: #1dc8cd;
+  color: black !important;
+  border-radius: 30px;
 }

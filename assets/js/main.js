@@ -195,3 +195,21 @@
   
 
 })()
+
+const submitBtn = document.getElementById("submitBtn");
+submitBtn.addEventListener("click", (event) => {
+  event.preventDefault();
+  console.log("event is called");
+  const name = document.getElementById("name").value;
+  const email = document.getElementById("email").value;
+  const textdetails = document.getElementById("textdetails").value;
+  if (!name || !email || !textdetails) {
+    return
+    } else {
+      submitBtn.style.display = "none";
+
+      const sentMessage = document.getElementById("sentMessage");
+      sentMessage.style.display = "block"
+      
+    }
+})
