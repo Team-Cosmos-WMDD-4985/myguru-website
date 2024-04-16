@@ -1708,8 +1708,12 @@ section {
   justify-content: center;
 }
 
-.proposalDownload{
+.proposalDownload {
   background-color: #1dc8cd;
   color: black !important;
   border-radius: 30px;
+}
+
+#footer strong {
+  margin-left: 3px;
 }
