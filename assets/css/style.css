@@ -88,20 +88,17 @@ h6 {
   height: 100px;
   transition: all 0.5s;
   z-index: 997;
-  /* background: linear-gradient(45deg, #1de099, #1dc8cd); */
   background-color: #26272B;
 }
 
-#header.header-transparent {
-  /* background: transparent; */
-}
 
 #header.header-scrolled {
-  /* background: linear-gradient(45deg, #1de099, #1dc8cd); */
   background-color: #26272B;
   height: 70px;
   transition: all 0.5s;
 }
+
+
 
 #header #logo h1 {
   font-size: 36px;
@@ -170,6 +167,30 @@ h6 {
   /* Hidden by default */
 }
 
+#hero2 {
+  display: none;
+}
+
+#hero1 {
+  display: block;
+}
+
+.arrowBg {
+  display: block;
+}
+
+.arrowSmall {
+  display: none;
+}
+
+
+@media (max-width: 775px) {
+
+  .arrowBg,
+  .arrowSmall {
+    display: none !important;
+  }
+}
 
 @media (max-width: 1000px) {
   .featureBox .icon {
@@ -224,12 +245,21 @@ h6 {
     margin: 0 0 10px 0;
   }
 
-  #hero {
+
+
+  #heroContainer {
     display: flex !important;
     flex-direction: column !important;
     justify-content: space-between !important;
     align-items: center !important;
-    /* height: 100vh !important; */
+  }
+
+  #hero2 {
+    display: block;
+  }
+
+  #hero1 {
+    display: none;
   }
 
   .heroImage {
@@ -250,8 +280,12 @@ h6 {
     display: block !important;
   }
 
-  .arrows {
+  .arrowBg {
     display: none;
+  }
+
+  .arrowSmall {
+    display: block;
   }
 
   .mobile {
@@ -282,9 +316,9 @@ h6 {
 
   .mobile-nav-toggle {
     display: block !important;
-    position: absolute;
+    /* position: absolute;
     right: 15px;
-    top: 15px;
+    top: 15px; */
     cursor: pointer;
     font-size: 24px;
     /* Adjust size as needed */
@@ -396,12 +430,11 @@ h6 {
 * Mobile Navigation 
 */
 .mobile-nav-toggle {
-  color: #1dc8cd;
-  font-size: 48px;
+  color: #44CFBE;
+  font-size: 60px;
   cursor: pointer;
   line-height: 0;
   transition: 0.5s;
-  margin-right: 20px;
 }
 
 
@@ -430,20 +463,25 @@ h6 {
 .navbar-mobile ul {
   display: block;
   position: absolute;
-  top: 55px;
-  right: 15px;
-  bottom: 15px;
-  left: 15px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
   padding: 10px 0;
-  background-color: #ffffff41;
+  background-color: #26272B;
   overflow-y: auto;
   transition: 0.3s;
-  width: 95%;
-
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  justify-content: start;
+  align-items: center;
+  padding-top: 25%;
 }
 
 .navbar-mobile>ul>li {
   padding: 0;
+  margin-top: 5%;
 }
 
 .navbar-mobile a:hover:before,
@@ -509,13 +547,12 @@ h6 {
 --------------------------------------------------------------*/
 #hero {
   padding-top: 100px;
-  /* margin-top: 100px; */
   width: 100%;
   /* max-width: 1200px; */
   /* height: 80vh; */
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-between !important;
   align-items: center;
   position: relative;
   background-color: #000;
@@ -544,11 +581,8 @@ h6 {
 }
 
 .hero-text h2 {
-  margin-top: 10px !important;
-}
-
-
-#hero h2 {
+  margin-top: 5px !important;
+  line-height: .8 !important;
   font-size: clamp(28px, 5vw, 36px);
   font-weight: 400;
   color: #7DFDE4;
@@ -563,7 +597,8 @@ h6 {
 
 
 
-#getStarted {
+#getStarted,
+#getStartedMobile {
   font-family: "Montserrat", sans-serif;
   font-weight: bold;
   font-size: 18px;
@@ -579,8 +614,8 @@ h6 {
 
 }
 
-#getStarted:hover {
-  /* color: black; */
+#getStarted:hover,
+#getStartedMobile:hover {
   background: #7DFDE4;
 }
 
@@ -597,8 +632,8 @@ h6 {
 
 .featureSection {
   width: 100%;
-  margin-bottom: 50px !important;
-  margin-top: 50px !important;
+  /* margin-bottom: 50px !important; */
+  /* margin-top: 50px !important; */
   display: flex;
   flex-flow: row;
   justify-content: center;
@@ -692,7 +727,7 @@ section {
 /* Section with background
 --------------------------------*/
 .section-bg {
-  background: #eff5f5;
+  background: white;
 }
 
 /*--------------------------------------------------------------
@@ -793,9 +828,9 @@ section {
 #features {
   background: #000;
   padding: 10px 0 0 0;
-  overflow: hidden;
-  background-image: url(./../img/Group.png);
-  background-size: cover;
+  /* overflow: hidden; */
+  /* background-image: url(./../img/Group.png); */
+  /* background-size: cover; */
 }
 
 #features .featureContainer {
@@ -817,6 +852,11 @@ section {
   padding-top: 20px;
   flex-grow: 1;
 
+}
+
+#features .icon img {
+  width: 120px !important;
+  height: auto;
 }
 
 #features .features-img img {
@@ -863,9 +903,9 @@ section {
 }
 
 #features .title {
-  font-weight: 300;
-  margin-bottom: 15px;
-  font-size: 22px;
+  font-weight: bold !important;
+  font-size: 28px;
+  margin-bottom: 24px;
 }
 
 #features .title a {
@@ -873,8 +913,8 @@ section {
 }
 
 #features .description {
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 20px;
+  line-height: 28px;
   margin-bottom: 10px;
 }
 
@@ -966,6 +1006,34 @@ section {
     padding: 0 0 30px 0;
   }
 }
+
+
+/* Video Section  */
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  max-width: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+/* End of Video Section  */
+
 
 /* Call To Action Section
 --------------------------------*/
@@ -1328,8 +1396,8 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 36px;
+  height: 36px;
   /* background-color: black;  */
   color: white;
   border-radius: 50%;
@@ -1345,8 +1413,8 @@ section {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 20px;
-  height: 20px;
+  width: 36px;
+  height: 36px;
   /* background-color: #333; */
   background-color: white;
   /* color: white; */
@@ -1541,10 +1609,12 @@ section {
   border-color: #7DFDE4;
   background-color: transparent;
   border-radius: 20px;
-  padding: 8px 30px;
+  padding: 8px 28px;
   color: #7DFDE4;
   font-size: large;
   font-weight: bold;
+  width: 150px !important;
+  height: 45px !important;
 }
 
 #contact .php-email-form button[type=submit]:hover {
@@ -1566,6 +1636,10 @@ section {
   #contact {
     justify-content: center;
     text-align: center;
+  }
+
+  #contact img {
+    margin-top: 30px !important;
   }
 
   #information div,
