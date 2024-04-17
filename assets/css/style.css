@@ -184,11 +184,19 @@ h6 {
 }
 
 
+
 @media (max-width: 775px) {
 
   .arrowBg,
   .arrowSmall {
     display: none !important;
+  }
+
+  .featuresTitle {
+    text-decoration: underline;
+    text-decoration-color: #7DFDE4;
+    text-decoration-thickness: 5px;
+    text-underline-offset: 10px;
   }
 }
 
@@ -204,8 +212,17 @@ h6 {
   .featureSection {
     display: flex;
     flex-direction: column !important;
-    justify-content: center;
-    align-items: center;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  .featureSection .features-img {
+    display: flex;
+    flex-direction: column !important;
+    justify-content: center !important;
+    align-items: center !important;
+    width: 100% !important;
   }
 
   .featureBox {
@@ -270,7 +287,6 @@ h6 {
   .hero-text {
     order: 2 !important;
     display: block !important;
-
     justify-content: center !important;
     text-align: center !important;
   }
@@ -278,6 +294,7 @@ h6 {
   .hero-text h2,
   .hero-text p {
     display: block !important;
+    text-align: center !important;
   }
 
   .arrowBg {
@@ -578,7 +595,6 @@ h6 {
   left: 0%;
   top: 40%;
   transform: translate(-50%, -50%);
-  padding-left: 5%;
 }
 
 .hero-text h2 {
@@ -637,8 +653,8 @@ h6 {
   /* margin-top: 50px !important; */
   display: flex;
   flex-flow: row;
-  justify-content: center;
-  align-items: center;
+  justify-content: center !important;
+  align-items: center !important;
 }
 
 .featuresTitle {
@@ -647,7 +663,8 @@ h6 {
   gap: 10px;
   justify-content: center;
   align-items: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .featuresTitle .section-title {
@@ -838,8 +855,10 @@ section {
   width: 100%;
   display: flex;
   flex-flow: column;
-  justify-content: space-around;
+  justify-content: space-around !important;
   align-items: center;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
 }
 
 #contact .section-title,
@@ -855,13 +874,24 @@ section {
 
 }
 
-#features .icon img {
-  width: 120px !important;
-  height: auto;
+#iconSize1 {
+  width: 109px !important;
+  height: 119px !important;
+}
+
+#iconSize2 {
+  width: 133px !important;
+  height: 100px !important;
+}
+
+#iconSize3 {
+  width: 100px !important;
+  height: 108px !important;
 }
 
 #features .features-img img {
-  max-width: 100%;
+  width: 442px;
+  height: 749px;
 }
 
 #features .box {
@@ -1370,8 +1400,16 @@ section {
 
 .social a {
   margin-left: 10px;
-
+  justify-content: center !important;
+  align-items: center;
 }
+
+.social a i {
+  margin-left: 10px;
+  justify-content: center !important;
+  align-items: center;
+}
+
 
 #team .member .social a:hover,
 #team .member .social span:hover {
@@ -1386,6 +1424,7 @@ section {
 .custom-swirl-icon img {
   width: 20px;
   height: auto;
+  margin-left: 10px;
 }
 
 .behance-icon i {
