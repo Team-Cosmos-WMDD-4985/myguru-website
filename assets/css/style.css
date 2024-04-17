@@ -184,6 +184,9 @@ h6 {
 }
 
 
+#featuresUnderline {
+  display: none;
+}
 
 @media (max-width: 775px) {
 
@@ -192,12 +195,16 @@ h6 {
     display: none !important;
   }
 
-  .featuresTitle {
+  #featuresUnderline {
+    display: block;
+  }
+
+  /* .featuresTitle {
     text-decoration: underline;
     text-decoration-color: #7DFDE4;
     text-decoration-thickness: 5px;
     text-underline-offset: 10px;
-  }
+  } */
 }
 
 @media (max-width: 1000px) {
@@ -890,8 +897,10 @@ section {
 }
 
 #features .features-img img {
-  width: 442px;
-  height: 749px;
+  width: 100%;
+  height: auto;
+  max-width: 442px;
+  max-height: 749px;
 }
 
 #features .box {
